@@ -109,19 +109,19 @@ angular.module('cardkitApp')
             draggable: true
           },
           {
-            name: 'Credit',
+            name: 'URL',
             type: 'text',
-            text: 'Credit: Insert name here',
+            text: 'pbs.org/frontline',
             fill: function() {
               return $scope.theme.quote;
             },
-            fontSize: 12,
+            fontSize: 22,
             fontFamily: function() {
               return $scope.theme.headlineFont;
             },
             textAnchor: 'start',
-            x: 50,
-            y: 250,
+            x: 470,
+            y: 240,
             draggable: true,
             editable: {
               text: true,
@@ -138,17 +138,44 @@ angular.module('cardkitApp')
           {
             name: 'Headline',
             type: 'text',
-            text: 'Edit this text, and drag it around.\n\nYou can upload your own background image,\nlogo, and change the colour of the text too.',
+            text: 'FRONTLINE FILM TITLE',
             fill: function() {
               return $scope.theme.quote;
             },
-            fontSize: 26,
+            fontSize: 40,
             fontFamily: function() {
               return $scope.theme.headlineFont;
             },
             textAnchor: 'start',
             x: 50,
-            y: 55,
+            y: 75,
+            draggable: true,
+            editable: {
+              text: true,
+              fill: 'picker',
+              textAnchor: true,
+              fontSize: {
+                'Small (18px)': 18,
+                'Medium (26px)': 26,
+                'Large (32px)': 32,
+                'Extra Large (40px)': 40,
+              },
+            },
+          },
+          {
+            name: 'Hashtag',
+            type: 'text',
+            text: '#frontlinepbs',
+            fill: function() {
+              return $scope.theme.quote;
+            },
+            fontSize: 32,
+            fontFamily: function() {
+              return $scope.theme.headlineFont;
+            },
+            textAnchor: 'start',
+            x: 50,
+            y: 285,
             draggable: true,
             editable: {
               text: true,
