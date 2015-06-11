@@ -91,7 +91,7 @@ angular.module('cardkitApp')
           {
             name: 'Logo',
             type: 'image',
-            width: 250,
+            width: 150,
             height: function() {
               return this.width;
             },
@@ -99,8 +99,8 @@ angular.module('cardkitApp')
               return $scope.theme.logoSrc;
             },
             opacity: 1,
-            x: 50,
-            y: 270,
+            x: 470,
+            y: 250,
             preserveAspectRatio: 'xMinYMin meet',
             editable: {
               src: true,
