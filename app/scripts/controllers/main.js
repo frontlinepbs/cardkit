@@ -114,19 +114,7 @@ angular.module('cardkitApp')
             fontFamily: 'Oswald-Light',
             textAnchor: 'start',
             x: 500,
-            y: 240,
-            draggable: true,
-            editable: {
-              text: true,
-              fontSize: {
-                'Small (12px)' : 12,
-                'Medium (18px)': 18,
-                'Large (22px)': 24,
-                'Extra Large (36px)': 36,
-              },
-              fill: 'picker',
-              textAnchor: true
-            },
+            y: 240
           },
           {
             name: 'Headline',
