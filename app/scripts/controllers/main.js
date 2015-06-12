@@ -91,7 +91,7 @@ angular.module('cardkitApp')
           {
             name: 'Logo',
             type: 'image',
-            width: 150,
+            width: 120,
             height: function() {
               return this.width;
             },
@@ -99,14 +99,9 @@ angular.module('cardkitApp')
               return $scope.theme.logoSrc;
             },
             opacity: 1,
-            x: 470,
+            x: 500,
             y: 250,
-            preserveAspectRatio: 'xMinYMin meet',
-            editable: {
-              src: true,
-              width: true,
-            },
-            draggable: true
+            preserveAspectRatio: 'xMinYMin meet'
           },
           {
             name: 'URL',
@@ -115,12 +110,10 @@ angular.module('cardkitApp')
             fill: function() {
               return $scope.theme.quote;
             },
-            fontSize: 24,
-            fontFamily: function() {
-              return $scope.theme.headlineFont;
-            },
+            fontSize: 21,
+            fontFamily: 'Oswald-Light',
             textAnchor: 'start',
-            x: 470,
+            x: 500,
             y: 240,
             draggable: true,
             editable: {
@@ -202,9 +195,7 @@ angular.module('cardkitApp')
               return $scope.theme.quote;
             },
             fontSize: 32,
-            fontFamily: function() {
-              return $scope.theme.headlineFont;
-            },
+            fontFamily: 'Oswald-Light',
             textAnchor: 'start',
             x: 50,
             y: 285,
