@@ -100,7 +100,7 @@ angular.module('cardkitApp')
             },
             opacity: 1,
             x: 500,
-            y: 250,
+            y: 255,
             preserveAspectRatio: 'xMinYMin meet'
           },
           {
@@ -114,7 +114,7 @@ angular.module('cardkitApp')
             fontFamily: 'Oswald-Light',
             textAnchor: 'start',
             x: 500,
-            y: 240
+            y: 245
           },
           {
             name: 'Headline',
