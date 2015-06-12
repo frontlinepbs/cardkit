@@ -115,7 +115,7 @@ angular.module('cardkitApp')
             fill: function() {
               return $scope.theme.quote;
             },
-            fontSize: 22,
+            fontSize: 24,
             fontFamily: function() {
               return $scope.theme.headlineFont;
             },
@@ -128,7 +128,7 @@ angular.module('cardkitApp')
               fontSize: {
                 'Small (12px)' : 12,
                 'Medium (18px)': 18,
-                'Large (22px)': 22,
+                'Large (22px)': 24,
                 'Extra Large (36px)': 36,
               },
               fill: 'picker',
@@ -138,7 +138,9 @@ angular.module('cardkitApp')
           {
             name: 'Headline',
             type: 'text',
-            text: 'FRONTLINE FILM TITLE',
+            text: function() {
+              return $scope.theme.headlineText;
+            },
             fill: function() {
               return $scope.theme.quote;
             },
@@ -149,6 +151,36 @@ angular.module('cardkitApp')
             textAnchor: 'start',
             x: 50,
             y: 75,
+            draggable: true,
+            editable: {
+              text: true,
+              fill: 'picker',
+              textAnchor: true,
+              fontSize: {
+                'Small (18px)': 18,
+                'Medium (26px)': 26,
+                'Large (32px)': 32,
+                'Extra Large (40px)': 40,
+              },
+            },
+          },
+          {
+            name: 'Subtitle',
+            type: function() {
+              return $scope.theme.subtitleText;
+            },
+            opacity: 0.65,
+            text: 'Example subtitle text',
+            fill: function() {
+              return $scope.theme.quote;
+            },
+            fontSize: 18,
+            fontFamily: function() {
+              return $scope.theme.headlineFont;
+            },
+            textAnchor: 'start',
+            x: 50,
+            y: 150,
             draggable: true,
             editable: {
               text: true,
