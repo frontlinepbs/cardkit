@@ -159,11 +159,11 @@ angular.module('cardkitApp')
           },
           {
             name: 'Subtitle',
-            type: function() {
+            type: 'text',
+            opacity: 0.65,
+            text: function() {
               return $scope.theme.subtitleText;
             },
-            opacity: 0.65,
-            text: 'Example subtitle text',
             fill: function() {
               return $scope.theme.quote;
             },
