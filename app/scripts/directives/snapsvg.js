@@ -219,7 +219,7 @@ angular.module('cardkitApp')
 
           if(elementData.type === 'text') {
             el.selectAll('tspan').forEach(function(tspan, i){
-              tspan.attr({x: elementData.x, y: elementData.y + (elementData.fontSize*i)});
+              tspan.attr({x: elementData.x, y: elementData.y + (elementData.fontSize*i) + (5*i)});
             });
           }
 
