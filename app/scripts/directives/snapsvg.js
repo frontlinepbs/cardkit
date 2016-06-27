@@ -326,7 +326,7 @@ angular.module('cardkitApp')
 
         function resetSvg() {
           var els = s.selectAll('*');
-          angular.forEach(els, function(e, i) {
+          angular.forEach(els, function(e) {
             e.transform('');
           });
         }

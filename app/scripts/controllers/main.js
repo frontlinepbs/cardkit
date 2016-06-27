@@ -99,8 +99,8 @@ angular.module('cardkitApp')
               return $scope.theme.logoSrc;
             },
             opacity: 1,
-            x: 500,
-            y: 255,
+            x: 600,
+            y: 300,
             preserveAspectRatio: 'xMinYMin meet'
           },
           {
@@ -111,10 +111,10 @@ angular.module('cardkitApp')
               return $scope.theme.quote;
             },
             fontSize: 21,
-            fontFamily: 'Oswald-Light',
+            fontFamily: 'cooper_hewittlight',
             textAnchor: 'start',
-            x: 500,
-            y: 245
+            x: 600,
+            y: 290
           },
           {
             name: 'Headline',
@@ -183,10 +183,10 @@ angular.module('cardkitApp')
               return $scope.theme.quote;
             },
             fontSize: 32,
-            fontFamily: 'Oswald-Light',
+            fontFamily: 'cooper_hewittlight',
             textAnchor: 'start',
             x: 50,
-            y: 285,
+            y: 310,
             draggable: true,
             editable: {
               text: true,
@@ -226,7 +226,7 @@ angular.module('cardkitApp')
     });
 
     $scope.resetSvg = function() {
-      $scope.config.svg = $scope.defaultConfig.svg
+      $scope.config.svg = $scope.defaultConfig.svg;
       createConfigCopy();
     };
 

@@ -1,0 +1,3 @@
+[submodule "fl-fonts"]
+	path = app/font
+	url = git@github.com:frontlinepbs/fl-fonts.git
