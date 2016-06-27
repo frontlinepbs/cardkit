@@ -9,7 +9,7 @@
  */
 angular.module('cardkitApp')
   .controller('MainCtrl', function ($scope, saveSvgAsPng, themeConfig) {
-    
+    window._scope = $scope;
     $scope.config = {
       sizes: [
         {
@@ -91,16 +91,20 @@ angular.module('cardkitApp')
           {
             name: 'Logo',
             type: 'image',
-            width: 120,
+            width: 150,
             height: function() {
-              return this.width;
+              return this.width / 2;
             },
             src: function() {
               return $scope.theme.logoSrc;
             },
             opacity: 1,
-            x: 600,
-            y: 300,
+            x: function() {
+              return $scope.size.width - this.width * 1.5;
+            },
+            y: function() {
+              return $scope.size.height - this.height();
+            },
             preserveAspectRatio: 'xMinYMin meet'
           },
           {
@@ -113,8 +117,14 @@ angular.module('cardkitApp')
             fontSize: 21,
             fontFamily: 'cooper_hewittlight',
             textAnchor: 'start',
-            x: 600,
-            y: 290
+            x: function() {
+              var logo = $scope.config.svg.elements[2];
+              return logo.x();
+            },
+            y: function() {
+              var logo = $scope.config.svg.elements[2];
+              return logo.y() - this.fontSize;
+            }
           },
           {
             name: 'Headline',
@@ -186,7 +196,9 @@ angular.module('cardkitApp')
             fontFamily: 'cooper_hewittlight',
             textAnchor: 'start',
             x: 50,
-            y: 310,
+            y: function() {
+              return $scope.size.height - 40;
+            },
             draggable: true,
             editable: {
               text: true,
