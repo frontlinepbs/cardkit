@@ -153,6 +153,9 @@ angular.module('cardkitApp')
             fontFamily: function() {
               return $scope.theme.headlineFont;
             },
+            lineHeight: function() {
+              return this.fontSize * 1.25;
+            },
             textAnchor: 'start',
             x: 50,
             y: 150,
