@@ -9,7 +9,7 @@
  */
 angular.module('cardkitApp')
   .controller('MainCtrl', function ($scope, saveSvgAsPng, themeConfig) {
-    window._scope = $scope;
+    //window._scope = $scope;
     $scope.config = {
       sizes: [
         {
@@ -108,25 +108,6 @@ angular.module('cardkitApp')
             preserveAspectRatio: 'xMinYMin meet'
           },
           {
-            name: 'URL',
-            type: 'text',
-            text: 'pbs.org/frontline',
-            fill: function() {
-              return $scope.theme.quote;
-            },
-            fontSize: 21,
-            fontFamily: 'cooper_hewittlight',
-            textAnchor: 'start',
-            x: function() {
-              var logo = $scope.config.svg.elements[2];
-              return logo.x();
-            },
-            y: function() {
-              var logo = $scope.config.svg.elements[2];
-              return logo.y() - this.fontSize;
-            }
-          },
-          {
             name: 'Headline',
             type: 'text',
             text: function() {
@@ -138,6 +119,9 @@ angular.module('cardkitApp')
             fontSize: 40,
             fontFamily: function() {
               return $scope.theme.headlineFont;
+            },
+            lineHeight: function() {
+              return this.fontSize * 1.25;
             },
             textAnchor: 'start',
             x: 50,
@@ -212,7 +196,30 @@ angular.module('cardkitApp')
               },
             },
           },
-        ],
+          {
+            name: 'URL',
+            type: 'text',
+            text: '',
+            fill: function() {
+              return $scope.theme.quote;
+            },
+            fontSize: 21,
+            fontFamily: 'cooper_hewittlight',
+            textAnchor: 'start',
+            editable: {
+              text: true,
+              fill: 'picker'
+            },
+            x: function() {
+              var logo = $scope.config.svg.elements[2];
+              return logo.x();
+            },
+            y: function() {
+              var logo = $scope.config.svg.elements[2];
+              return logo.y() - this.fontSize;
+            }
+          }
+        ]
       }
     };
 
